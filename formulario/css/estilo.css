@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos gerais para todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Define o box-sizing como border-box para facilitar o controle de tamanhos */
+    font-family: 'Poppins', sans-serif; /* Define a fonte do site */
+}
+
+/* Estilo para o corpo da página */
+body {
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da janela */
+    background-color: #6366f1; /* Cor de fundo */
+}
+
+/* Estilo para os botões */
+.btn-default {
+    background-color: #6366f1; /* Cor de fundo do botão */
+    display: flex; /* Flexbox para centralizar o conteúdo dentro do botão */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Alinha os itens no centro horizontalmente */
+    border: none; /* Remove a borda do botão */
+    padding: 8px 12px; /* Espaçamento interno do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: #ffffff; /* Cor do texto */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    height: fit-content; /* Ajusta a altura do botão */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.btn-default:hover {
+    background-color: #818cf8; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o container do formulário */
+#form_container {
+    display: flex; /* Flexbox para organizar o conteúdo */
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 32px; /* Espaçamento entre os itens */
+    height: 100%; /* Preenche a altura disponível */
+    background-color: #f6f8ff; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para o cabeçalho do formulário */
+#form_header {
+    display: flex; /* Flexbox para organizar o conteúdo */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo para o título do formulário */
+#form_title {
+    font-weight: 500; /* Peso da fonte */
+    color: #272727; /* Cor do texto */
+    position: relative; /* Permite usar o pseudo-elemento ::after */
+}
+
+/* Estilo para a linha abaixo do título */
+#form_title::after {
+    content: ''; /* Cria o pseudo-elemento */
+    position: absolute; /* Posiciona de forma absoluta em relação ao título */
+    width: 100px; /* Largura da linha */
+    height: 3px; /* Altura da linha */
+    border-radius: 30px; /* Bordas arredondadas */
+    background-color: #6366f1; /* Cor da linha */
+    left: 0; /* Alinha a linha à esquerda */
+    bottom: 0; /* Alinha a linha na parte inferior */
+}
+
+/* Estilo para o formulário em si */
+#form {
+    display: flex; /* Flexbox para organizar o conteúdo */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 32px; /* Espaçamento entre os itens */
+    height: 100%; /* Preenche a altura disponível */
+}
+
+/* Estilo para o container dos campos de entrada */
+#input_container {
+    display: grid; /* Grid para organizar os campos */
+    gap: 24px; /* Espaçamento entre os campos */
+}
+
+/* Estilo para o rótulo dos campos */
+.form-label {
+    font-size: 12px; /* Tamanho da fonte */
+    color: #404044; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilo para os campos de entrada */
+.input-field {
+    display: flex; /* Flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color: #ffff; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para os ícones dentro dos campos */
+.input-field i {
+    display: flex; /* Flexbox para alinhar o ícone */
+    align-items: center; /* Alinha o ícone verticalmente */
+    width: 30px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    color: #404044; /* Cor do ícone */
+}
+
+/* Estilo para os inputs de texto */
+.form-control {
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo para o ícone de senha ao passar o mouse */
+.input-field .password-icon:hover {
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    color: #676770; /* Altera a cor do ícone ao passar o mouse */
+}
+
+/* Estilo para o foco nos campos de entrada */
+.form-control:focus {
+    outline: none; /* Remove o contorno ao focar no campo */
+}
+
+/* Estilo para o campo de entrada focado */
+.input-box .input-field:focus-within {
+    outline: 2px solid #6366f1; /* Adiciona um contorno azul ao focar */
+}
+
+/* Estilo para os campos de preenchimento automático */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Remove o fundo amarelo do autofill */
+    color: #000; /* Define a cor do texto como preta */
+}
+
+/* Estilo para o container dos campos de gênero */
+.radio-container {
+    grid-column: span 2; /* Ocupa duas colunas */
+}
+
+/* Estilo para os inputs de gênero */
+#gender_inputs {
+    display: flex; /* Flexbox para organizar os itens */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para cada caixa de seleção de gênero */
+.radio-box {
+    display: flex; /* Flexbox para alinhar os itens */
+    gap: 4px; /* Espaçamento entre o ícone e o texto */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo para os inputs de rádio */
+.form-control[type="radio"] {
+    accent-color: #6366f1; /* Cor personalizada para os inputs de rádio */
+}
+
+/* Estilo para as mensagens de erro */
+.error {
+    color: #dc2626; /* Cor vermelha para a mensagem de erro */
+    font-size: 12px; /* Tamanho da fonte */
+    margin-top: 4px; /* Espaçamento acima da mensagem */
+    max-width: 200px; /* Largura máxima */
+}
+
+/* Estilo para o campo inválido */
+.input-box.invalid .form-label {
+    color: #dc2626; /* Altera a cor do rótulo para vermelho */
+}
+
+/* Estilo para o campo inválido */
+.input-box.invalid .input-field {
+    border: 1px solid #dc2626; /* Adiciona uma borda vermelha */
+}
+
+/* Estilo para o campo válido */
+.input-box.valid .form-label {
+    color: #22c55e; /* Cor verde para o rótulo */
+}
+
+/* Estilo para o campo válido */
+.input-box.valid .input-field {
+    border: 1px solid #22c55e; /* Borda verde para campos válidos */
+}
+
+/* Estilo para o container de gênero inválido */
+.radio-container.invalid .form-label:first-child {
+    color: #dc2626; /* Cor vermelha para o rótulo de gênero */
+}
+
+/* Estilo para o container de gênero válido */
+.radio-container.valid .form-label:first-child {
+    color: #22c55e; /* Cor verde para o rótulo de gênero */
+}
+
+/* Estilo para dispositivos com largura máxima de 500px */
+@media screen and (max-width: 500px) {
+    #form_container {
+        width: 100%; /* Largura total para o container */
+        min-height: 100vh; /* Altura mínima para o container */
+        padding: 32px; /* Espaçamento interno */
+    }
+
+    #input_container {
+        display: flex; /* Flexbox para os campos de entrada */
+        flex-direction: column; /* Organiza os campos em coluna */
+        gap: 38px; /* Espaçamento entre os campos */
+    }
+
+    .form-control[type="date"] {
+        background-color: #fff; /* Cor de fundo branca para o campo de data */
+    }
+}

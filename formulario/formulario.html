@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5. Inicia o documento HTML. -->
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil. -->
+ <head> <!-- Início da seção de cabeçalho (onde são inseridas as configurações da página). -->
+     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, permitindo a exibição de caracteres especiais como acentos e símbolos. -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva em dispositivos móveis, ajustando o conteúdo à largura da tela. -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Link para carregar os ícones do FontAwesome da CDN, que oferece ícones para serem usados na página. -->
+     <link rel="stylesheet" href="/css/estilo.css"> <!-- Link para o arquivo de estilo (CSS) localizado em /css/estilo.css, onde o estilo da página é configurado. -->
+     <title>Criar conta</title> <!-- Título da página exibido na aba do navegador. -->
+ </head> <!-- Fim da seção de cabeçalho. -->
+ <body> <!-- Início do corpo do documento (onde o conteúdo visível da página é colocado). -->
+     <main id="form_container"> <!-- Início do container principal do formulário com o id "form_container" para facilitar a estilização. -->
+         <div id="form_header"> <!-- Início da seção de cabeçalho dentro do formulário. -->
+             <h1 id="form_title"> <!-- Título principal da página, com id "form_title". -->
+                 Criar conta <!-- Texto exibido como título da página. -->
+             </h1>
+             <button class="btn-default"> <!-- Botão para alguma ação, com a classe "btn-default" que estiliza o botão. -->
+                 <i class="fa-solid fa-right-to-bracket"></i> <!-- Ícone de login do FontAwesome. -->
+             </button>
+         </div> <!-- Fim da seção do cabeçalho. -->
+ 
+         <form action="" id="form"> <!-- Início do formulário. A ação do formulário está vazia (""), o que significa que será submetido à mesma página ou processado via JavaScript. -->
+             <div id="input_container"> <!-- Container que envolve todos os campos de entrada do formulário. -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "Primeiro nome". -->
+                     <label for="name" class="form-label"> <!-- Rótulo que descreve o campo de entrada. O "for" associa o rótulo ao campo com id "name". -->
+                         Primeiro nome <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada, incluindo o ícone. -->
+                         <input type="text" name="name" id="name" class="form-control" placeholder="Fulano"> <!-- Campo de entrada para o primeiro nome. O "placeholder" exibe um texto dentro do campo como sugestão. -->
+                         <i class="fa-regular fa-user"></i> <!-- Ícone de usuário do FontAwesome para ser exibido dentro do campo. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada do "Primeiro nome". -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "Último nome". -->
+                     <label for="last_name" class="form-label"> <!-- Rótulo que descreve o campo de entrada, associando com o campo de id "last_name". -->
+                         Último nome <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada, incluindo o ícone. -->
+                         <input type="text" name="last_name" id="last_name" class="form-control" placeholder="De Tal"> <!-- Campo de entrada para o sobrenome. -->
+                         <i class="fa-regular fa-user"></i> <!-- Ícone de usuário do FontAwesome. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada do "Último nome". -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "Nascimento". -->
+                     <label for="birthdate" class="form-label"> <!-- Rótulo para o campo de entrada com id "birthdate". -->
+                         Nascimento <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada. -->
+                         <input type="date" name="birthdate" id="birthdate" class="form-control"> <!-- Campo de entrada do tipo "date" para a data de nascimento. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada do "Nascimento". -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "E-mail". -->
+                     <label for="email" class="form-label"> <!-- Rótulo para o campo de entrada com id "email". -->
+                         E-mail <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada, incluindo o ícone. -->
+                         <input type="email" name="email" id="email" class="form-control" placeholder="exemplo@gmail.com"> <!-- Campo de entrada para o e-mail. -->
+                         <i class="fa-regular fa-envelope"></i> <!-- Ícone de envelope do FontAwesome. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada do "E-mail". -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "Senha". -->
+                     <label for="password" class="form-label"> <!-- Rótulo para o campo de entrada com id "password". -->
+                         Senha <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada, incluindo o ícone. -->
+                         <input type="password" name="password" id="password" class="form-control" placeholder="*******"> <!-- Campo de entrada de senha. -->
+                         <i class="fa-regular fa-eye-slash password-icon"></i> <!-- Ícone para mostrar/ocultar senha. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada da "Senha". -->
+ 
+                 <div class="input-box"> <!-- Caixa de entrada para o campo de "Confirmar senha". -->
+                     <label for="confirm_password" class="form-label"> <!-- Rótulo para o campo de entrada com id "confirm_password". -->
+                         Confirmar senha <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+                     <div class="input-field"> <!-- Contêiner para o campo de entrada, incluindo o ícone. -->
+                         <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="*******"> <!-- Campo de entrada para confirmar a senha. -->
+                         <i class="fa-regular fa-eye-slash password-icon"></i> <!-- Ícone para mostrar/ocultar senha. -->
+                     </div>
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim da caixa de entrada do "Confirmar senha". -->
+ 
+                 <div class="radio-container"> <!-- Container para as opções de "Gênero". -->
+                     <label class="form-label"> <!-- Rótulo descritivo do campo de "Gênero". -->
+                         Gênero <!-- Texto descritivo exibido ao lado do campo de entrada. -->
+                     </label>
+ 
+                     <div id="gender_inputs"> <!-- Contêiner para as opções de gênero. -->
+                         <div class="radio-box"> <!-- Caixa de entrada para a opção "Feminino". -->
+                             <input type="radio" name="gender" id="female" class="form-control" value="female"> <!-- Campo de seleção para "Feminino". -->
+                             <label for="female" class="form-label"> <!-- Rótulo para a opção "Feminino". -->
+                                 Feminino <!-- Texto da opção. -->
+                             </label>
+                         </div> <!-- Fim da caixa de seleção "Feminino". -->
+ 
+                         <div class="radio-box"> <!-- Caixa de entrada para a opção "Masculino". -->
+                             <input type="radio" name="gender" id="male" class="form-control" value="male"> <!-- Campo de seleção para "Masculino". -->
+                             <label for="male" class="form-label"> <!-- Rótulo para a opção "Masculino". -->
+                                 Masculino <!-- Texto da opção. -->
+                             </label>
+                         </div> <!-- Fim da caixa de seleção "Masculino". -->
+ 
+                         <div class="radio-box"> <!-- Caixa de entrada para a opção "Outro". -->
+                             <input type="radio" name="gender" id="other" class="form-control" value="other"> <!-- Campo de seleção para "Outro". -->
+                             <label for="other" class="form-label"> <!-- Rótulo para a opção "Outro". -->
+                                 Outro <!-- Texto da opção. -->
+                             </label>
+                         </div> <!-- Fim da caixa de seleção "Outro". -->
+                     </div> <!-- Fim do contêiner de opções de gênero. -->
+ 
+                     <span class="error"></span> <!-- Espaço reservado para mensagens de erro. -->
+                 </div> <!-- Fim do contêiner de gênero. -->
+             </div> <!-- Fim do container de entradas. -->
+ 
+             <button type="submit" class="btn-default"> <!-- Botão para submeter o formulário, com a classe "btn-default". -->
+                 <i class="fa-solid fa-check"></i> <!-- Ícone de "check" do FontAwesome. -->
+                 Criar conta <!-- Texto exibido no botão. -->
+             </button>
+         </form> <!-- Fim do formulário. -->
+     </main> <!-- Fim do contêiner principal do formulário. -->
+ 
+     <script src="/js/js.js"></script> <!-- Link para o arquivo JavaScript, que provavelmente lida com a interação e validação do formulário. -->
+ </body> <!-- Fim do corpo do documento. -->
+</html> <!-- Fim do documento HTML. -->
